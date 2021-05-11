@@ -1,10 +1,12 @@
 # kubot_slam_pkg
 
-[![Apache-2.0 License](https://img.shields.io/badge/license-KUBOT-orange.svg)](http://www.shayangye.com/)
+[![Apache-2.0 License](https://img.shields.io/badge/license-Apache2.0-purple)](http://www.shayangye.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Platform Badge](https://img.shields.io/badge/platform-ROS_Melodic-blue.svg)](http://www.shayangye.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![version](https://img.shields.io/badge/version-0.0.1-green)](http://www.shayangye.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[![robot](https://img.shields.io/badge/robot-KUBOT-orange)](http://www.shayangye.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Introduction
@@ -31,7 +33,6 @@
 	- [ ] catographer.launch
 	- [ ] karto_slam.launch
 	- [ ] view_cartographer.launch
-
 
 - [ ] kubot_slam_3d
 	- [ ] rgbd_slam.launch
