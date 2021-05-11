@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>kubot_control</name>
+  <version>0.0.0</version>
+  <description>
+  The kubot_control package
+  </description>
+
+  <author>KUBOT</author>
+  <!-- KUBOT ROS  -->
+  <maintainer email="yunhong.wang@shayanye.com">Yun-Hong</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
