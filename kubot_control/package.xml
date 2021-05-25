@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>kubot_control</name>
-  <version>0.0.0</version>
+  <version>0.0.8</version>
   <description>
   The kubot_control package
   </description>
 
   <author>KUBOT</author>
   <!-- KUBOT ROS  -->
-  <maintainer email="yunhong.wang@shayanye.com">Yun-Hong</maintainer>
+  <maintainer email="t105408001@ntut.org.tw">Yun-Hong</maintainer>
 
-  <license>TODO</license>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

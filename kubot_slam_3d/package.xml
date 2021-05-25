@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>kubot_3dsensor</name>
+  <name>kubot_slam_3d</name>
   <version>0.0.1</version>
   <description>
-  Kubot 3D Sense package 
+  Kubot 3D SLAM package 
   </description>
   
   <author>KUBOT</author>
