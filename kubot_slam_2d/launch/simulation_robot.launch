@@ -7,7 +7,12 @@
 
   <include file="$(find kubot_lidar)/launch/ira_lidar_example.launch"/>
 
-  <include file="$(find kubot_lidar)/launch/lidar_filter.launch"/>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="kubot_lidar" />
+    <arg name="file" value="lidar_filter.launch" />
+    <arg name="node_name" value="timed_roslaunch" />
+  </include>
 
   <include file="$(find kubot_navigation)/launch/include/move_base.launch.xml" />
 
