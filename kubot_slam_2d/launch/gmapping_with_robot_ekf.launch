@@ -1,6 +1,8 @@
 <launch>
+  <arg name="use_imu" default="true" doc="use imu in kubot robot"/>
+
   <include file="$(find kubot_bringup)/launch/robot.launch">
-    <param name="use_imu" value="true"/>
+    <param name="use_imu" value="$(arg use_imu)"/>
   </include>
 
   <param name="use_sim_time" value="false" />
