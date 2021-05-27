@@ -25,7 +25,7 @@
   <!-- RTAB=Map node -->
   <group ns="rtabmap">
     <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="$(arg rtabmap_args)">
-      <param name="frame_id"            type="string" value="base_link"/>
+      <param name="frame_id"            type="string" value="footbrpint"/>
       <param name="database_path"       type="string" value="$(arg database_path)"/>
       <param name="subscribe_depth"     type="bool"   value="false"/>
       <param name="subscribe_scan"      type="bool"   value="false"/>
@@ -34,7 +34,7 @@
       <param name="subscribe_scan"      type="bool"   value="true"/>
 
       <!-- Input topics -->
-      <remap from="scan"                to="/scan"/>
+      <remap from="scan"                to="/scan_filtered"/>
       <remap from="odom"                to="/odom"/>
       <remap from="rgbd_image"          to="/camera/rgbd_image"/>
 

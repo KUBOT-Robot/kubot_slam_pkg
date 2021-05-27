@@ -1,5 +1,4 @@
 <launch>
-
   <arg name="use_imu" default="false" doc="use imu in kubot"/>
 
   <include file="$(find kubot_bringup)/launch/robot.launch">
@@ -9,9 +8,10 @@
   <param name="use_sim_time" value="false" />
 
   <arg name="map_name" default="my_lab.yaml" />
+
   <node name="map_server" pkg="map_server" type="map_server" args="$(find kubot_navigation)/maps/$(arg map_name)"/>
 
   <include file="$(find kubot_navigation)/launch/include/move_base.launch.xml" />
-  <include file="$(find kubot_navigation)/launch/include/amcl.launch.xml" />
   
+  <include file="$(find kubot_navigation)/launch/include/amcl.launch.xml" />
 </launch>

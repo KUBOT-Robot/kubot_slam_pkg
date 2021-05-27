@@ -1,19 +1,18 @@
 <launch>
   <arg name="localization"    default="false" doc="Localization mode for navigation"/>
-  <arg name="3dsensor"        default="$(env PIBOT_3DSENSOR)" doc="model type [xtion, astra, d435i]"/>
-  <arg name="use_imu"         default="false" doc="use imu in pibot"/>
+  <arg name="sensor" default="$(env KUBOT_3DSENSOR)" doc="model type [non-3dsensor, xtion, astra, kinectV1, kinectV2, d435i]"/>
+  <arg name="use_imu" default="false" doc="use imu ekf in KUBOT"/>
 
-	<!-- PIBOT Base -->
-  <include file="$(find pibot_bringup)/launch/robot.launch">
+<!-- KUBOT base driver -->
+  <include file="$(find kubot_bringup)/launch/robot.launch" >
     <arg name="use_imu" value="$(arg use_imu)"/>
   </include>
+
+<!-- Move Base -->
+  <include file="$(find kubot_navigation)/launch/include/move_base.launch.xml"/>
   
-	<!-- Move Base -->
-  <include file="$(find pibot_navigation)/launch/include/move_base.launch.xml"/>
-  
-	<!-- rtabmap of 3dsensor -->
-  <include unless="$(eval arg('3dsensor') == 'none')" file="$(find pibot_slam_3d)/launch/$(arg 3dsensor).launch">
+<!-- rtabmap of 3dsensor -->
+  <include unless="$(eval arg('3dsensor') == 'non-3dsensor')" file="$(find kubot_slam_3d)/launch/$(arg 3dsensor).launch">
 	  <arg name="localization" value="$(arg localization)" />
   </include>
-
 </launch>
