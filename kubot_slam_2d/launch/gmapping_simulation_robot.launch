@@ -16,7 +16,7 @@
 
   <include file="$(find kubot_navigation)/launch/include/move_base.launch.xml" />
 
-  <include file="$(find kubot_slam_2d)/launch/gmapping.launch"/>
+  <include file="$(find kubot_slam_2d)/launch/include/gmapping.launch.xml" />
 
   <group if="$(arg open_rviz)">
 		<node name="rviz" pkg="rviz" type="rviz" args="-d $(find kubot_navigation)/rviz/view_navigation.rviz" />
