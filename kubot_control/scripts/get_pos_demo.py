@@ -9,13 +9,13 @@ class Robot:
     def __init__(self):
         self.tf_listener = tf.TransformListener()
         try:
-            self.tf_listener.waitForTransform('/map', '/base_link', rospy.Time(), rospy.Duration(1.0))
+            self.tf_listener.waitForTransform('/map', '/footprint', rospy.Time(), rospy.Duration(1.0))
         except (tf.Exception, tf.ConnectivityException, tf.LookupException):
             return
 
     def get_pos(self):
         try:
-            (trans, rot) = self.tf_listener.lookupTransform('/map', '/base_link', rospy.Time(0))
+            (trans, rot) = self.tf_listener.lookupTransform('/map', '/footprint', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             rospy.loginfo("tf Error")
             return None
