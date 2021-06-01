@@ -9,7 +9,7 @@
     <param name="first_map_only" value="true"/>
     <param name="tf_broadcast" value="true"/>
 
-    <param name="odom_model_type" if="$(eval arg('model_type') == 'diff')" value="diff"/>
+    <param name="odom_model_type" if="$(eval arg('model_type') == 'diff-corrected')" value="diff-corrected"/>
     <param name="odom_model_type" unless="$(eval arg('model_type') == 'diff')" value="omni-corrected"/>
 
     <param name="odom_alpha5" value="0.08"/>
