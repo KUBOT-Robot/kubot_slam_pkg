@@ -69,7 +69,7 @@ class navigation_demo:
 if __name__ == "__main__":
     rospy.init_node('navigation_demo',anonymous=True)
 
-    launch_nav = launch_demo(["roslaunch", "pibot_simulator", "nav.launch"])
+    launch_nav = launch_demo(["roslaunch", "kubot_navigation", "nav.launch"])
     launch_nav.launch()
 
     r = rospy.Rate(0.2)
