@@ -1,7 +1,7 @@
 <launch>
     <node pkg="kubot_control" type="navigation_multi_goals.py" respawn="false" name="navigation_multi_goals" output="screen">
-        <param name="goalListX" value="2.4, -1.5, 2.4" />
-        <param name="goalListY" value="1.0, -2.5, 1.0" />
-        <param name="goalListYaw" value="0.0, 90.0, 0" /><!--degree--> 
+        <param name="goalListX" value="2.0, 3.0, 3.0, 2.0" />
+        <param name="goalListY" value="1.0, 1.0, 0.0, 1.0" />
+        <param name="goalListYaw" value="0.0, -90.0, -180.0, 0.0" /><!--degree--> 
     </node>
 </launch>
