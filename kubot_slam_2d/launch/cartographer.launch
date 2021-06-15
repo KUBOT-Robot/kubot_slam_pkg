@@ -5,23 +5,23 @@
 		<arg name="use_odom" value="false"/>
 	</include>
 
-<!-- kinetic cartographer V0.2.0-->
-  	<group ns="/" if="$(eval arg('ros_distro') == 'kinetic')" >
-		  <node name="cartographer_node"  if="$(eval arg('ros_distro') == 'kinetic')" pkg="cartographer_ros" type="cartographer_node" args="
+	<!-- kinetic cartographer V0.2.0-->
+	<group ns="/" if="$(eval arg('ros_distro') == 'kinetic')">
+		<node name="cartographer_node" if="$(eval arg('ros_distro') == 'kinetic')" pkg="cartographer_ros" type="cartographer_node" args="
 			  -configuration_directory
 			  	$(find kubot_slam_2d)/configuration_files
 			  -configuration_basename lidar_2d_v0.2.lua" output="screen">
-		  </node>
-  	</group>
+		</node>
+	</group>
 
-<!-- melodic cartographer V1.0.0-->
-  	<group ns="/" if="$(eval arg('ros_distro') == 'melodic')" >
-		  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
+	<!-- melodic cartographer V1.0.0-->
+	<group ns="/" if="$(eval arg('ros_distro') == 'melodic')">
+		<node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
 			  -configuration_directory
 			  	$(find kubot_slam_2d)/configuration_files
 			  -configuration_basename lidar_2d_v1.0.lua" output="screen">
-		  </node>
-		  <!-- Additional node which converts Cartographer map into ROS occupancy grid map. Not used and can be skipped in this case -->
-    	<node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-  	</group>
+		</node>
+		<!-- Additional node which converts Cartographer map into ROS occupancy grid map. Not used and can be skipped in this case -->
+		<node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+	</group>
 </launch>

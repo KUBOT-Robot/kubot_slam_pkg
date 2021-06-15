@@ -13,6 +13,5 @@
 		<param name="output_frame_id" value="/camera_link" />
 
 	</node>
-
 </launch>
 
