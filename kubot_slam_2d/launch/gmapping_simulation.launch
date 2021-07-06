@@ -11,7 +11,7 @@
 		<arg name="time" value="2" />
 		<arg name="pkg" value="kubot_lidar" />
 		<arg name="file" value="lidar_filter.launch" />
-		<arg name="node_name" value="timed_roslaunch" />
+		<arg name="value" value="arg1:=1.2" />
 	</include>
 
 	<include file="$(find kubot_navigation)/launch/include/move_base.launch.xml" />
