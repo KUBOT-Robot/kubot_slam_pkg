@@ -32,7 +32,7 @@ TebLocalPlannerROS:
   footprint_model:
     type: "polygon"
     #vertices: [[0.506,-0.32],[0.506,0.32],[-0.454,0.32],[-0.454,-0.32]]
-    vertices: [[-0.4, -0.27], [0.4, -0.27], [0.4, 0.27], [-0.4, 0.27]]
+    vertices: [[-0.42, -0.29], [0.42, -0.29], [0.42, 0.29], [-0.42, 0.29]]
 
   # Goal tolerance
   xy_goal_tolerance: 0.10                  # Allowed final euclidean distance to the goal position
