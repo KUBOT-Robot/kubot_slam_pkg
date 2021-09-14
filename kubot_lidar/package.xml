@@ -14,6 +14,9 @@
 	<author email="t105408001@ntut.org.tw">Yun Hong</author>
 
 	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>rplidar_ros</build_depend>
+	
+
 
 	<!-- The export tag contains other, unspecified, tags -->
 	<export>
