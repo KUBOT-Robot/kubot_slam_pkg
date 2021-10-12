@@ -7,8 +7,6 @@
 		<arg name="use_imu" value="$(arg use_imu)"/>
 	</include>
 
-	<include file="$(find kubot_lidar)/launch/ira_lidar_example.launch"/>
-
 	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
 		<arg name="time" value="2" />
 		<arg name="pkg" value="kubot_lidar" />
