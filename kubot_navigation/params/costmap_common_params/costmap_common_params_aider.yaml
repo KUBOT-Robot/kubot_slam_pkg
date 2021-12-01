@@ -1,5 +1,5 @@
 #robot_radius: 0.16  # distance a circular robot should be clear of the obstacle (kobuki: 0.18)
-footprint: [[-0.42, -0.29], [0.42, -0.29], [0.42, 0.29], [-0.42, 0.29]]
+footprint: [[0.43, -0.3], [0.43, 0.3], [-0.43, 0.3], [-0.43, -0.3]]
 # footprint: [[x0, y0], [x1, y1], ... [xn, yn]]  # if the robot is not circular
 
 map_type: voxel
@@ -14,15 +14,15 @@ obstacle_layer:
   observation_sources:  scan
 
   laser_scan_sensor: {data_type: LaserScan, topic: scan_filtered, marking: true, clearing: true, min_obstacle_height: 0.00, max_obstacle_height: 3.00, inf_is_valid: true}
-#point_cloud_sensor: {sensor_frame: lslidar_c16_frame, data_type: PointCloud2, topic: /lidar_point_cloud/filtered, marking: true, clearing: true}
+# point_cloud_sensor: {sensor_frame: lslidar_c16_frame, data_type: PointCloud2, topic: /lidar_point_cloud/filtered, marking: true, clearing: true}
 
 lowbstacle_layer:
   origin_z:             -0.1
   z_resolution:         1.8
   z_voxels:             1
-  obstacle_range: 3.5 #if beyond this threshold, then will not mark as obstacle
-  raytrace_range: 5.0 #5.0 Lower this value to detect nearer obstacles with better accuracy
-  observation_sources: obs_cloud mock_scan #butt_scan1 butt_scan2
+  obstacle_range:       3.5   #if beyond this threshold, then will not mark as obstacle
+  raytrace_range:        5.0  #5.0; Lower this value to detect nearer obstacles with better accuracy
+  observation_sources: obs_cloud mock_scan # butt_scan1 butt_scan2
 
   obs_cloud:
     data_type: PointCloud2
