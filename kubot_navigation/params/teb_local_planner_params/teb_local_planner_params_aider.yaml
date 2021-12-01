@@ -29,7 +29,7 @@ TebLocalPlannerROS:
     type: "polygon"
     radius: 0.38 # for type "circular"
     #vertices: [[0.506,-0.32],[0.506,0.32],[-0.454,0.32],[-0.454,-0.32]]
-    vertices: [[-0.42, -0.29], [0.42, -0.29], [0.42, 0.29], [-0.42, 0.29]]
+    vertices: [[0.42, -0.29], [0.42, 0.29], [-0.42, 0.29], [-0.42, -0.29]]
 
   wheelbase: 1.0                           # The distance between the drive shaft and steering axle (only required for a carlike robot with 'cmd_angle_instead_rotvel' enabled); The value might be negative for back-wheeled robots!
   cmd_angle_instead_rotvel: false          # Substitute the rotational velocity in the commanded velocity message by the corresponding steering angle (check 'axles_distance')
