@@ -18,18 +18,18 @@ TebLocalPlannerROS:
   # Robot
 
   max_vel_x: 0.2                           # Maximum translational velocity of the robot
-  max_vel_x_backwards: 0.2                 # Maximum translational velocity of the robot for driving backwards
+  max_vel_x_backwards: 0.1                 # Maximum translational velocity of the robot for driving backwards
   max_vel_y: 0.0                           # Maximum strafing velocity of the robot (should be zero for non-holonomic robots!)
-  max_vel_theta: 0.785                     # Maximum angular velocity of the robot
-  acc_lim_x: 0.2                           # Maximum translational acceleration of the robot
+  max_vel_theta: 0.3                       # Maximum angular velocity of the robot
+  acc_lim_x: 0.1                           # Maximum translational acceleration of the robot
   acc_lim_y: 0.0                           # Maximum strafing acceleration of the robot
-  acc_lim_theta: 0.7854                    # Maximum angular acceleration of the robot
+  acc_lim_theta: 0.1                       # Maximum angular acceleration of the robot
   min_turning_radius: 0.0                  # Minimum turning radius of a carlike robot (diff-drive robot: zero)
   footprint_model:
     type: "polygon"
     radius: 0.38 # for type "circular"
     #vertices: [[0.506,-0.32],[0.506,0.32],[-0.454,0.32],[-0.454,-0.32]]
-    vertices: [[0.42, -0.29], [0.42, 0.29], [-0.42, 0.29], [-0.42, -0.29]]
+    vertices: [[0.43, -0.3], [0.43, 0.3], [-0.43, 0.3], [-0.43, -0.3]]
 
   wheelbase: 1.0                           # The distance between the drive shaft and steering axle (only required for a carlike robot with 'cmd_angle_instead_rotvel' enabled); The value might be negative for back-wheeled robots!
   cmd_angle_instead_rotvel: false          # Substitute the rotational velocity in the commanded velocity message by the corresponding steering angle (check 'axles_distance')
