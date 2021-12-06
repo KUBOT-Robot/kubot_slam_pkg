@@ -20,9 +20,9 @@ DWAPlannerROS:
   min_vel_theta: 0.8  # this is the min angular velocity when there is negligible translational velocity
   theta_stopped_vel: 0.1
   
-  acc_lim_x: 0.6    # default: 2.5; The x acceleration limit of the robot in meters/sec^2.
+  acc_lim_x: 0.1    # default: 2.5; The x acceleration limit of the robot in meters/sec^2.
   acc_lim_y: 0        # diff drive robot default:0; The y acceleration limit of the robot in meters/sec^2.
-  acc_lim_theta: 1.2    # default: 3.2; The rotational acceleration limit of the robot in radians/sec^2.
+  acc_lim_theta: 0.1    # default: 3.2; The rotational acceleration limit of the robot in radians/sec^2.
 
 # Goal Tolerance Parameters
 
