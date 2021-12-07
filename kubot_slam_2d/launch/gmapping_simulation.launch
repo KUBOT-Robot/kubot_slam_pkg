@@ -5,15 +5,6 @@
 	<arg name="open_rviz" default="true"/>
 	<arg name="local_planner" default="dwa" doc="local planner of dwa or teb" />
 
-	<include file="$(find kubot_lidar)/launch/ira_lidar_example.launch"/>
-
-	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
-		<arg name="time" value="2" />
-		<arg name="pkg" value="kubot_lidar" />
-		<arg name="file" value="lidar_filter.launch" />
-		<arg name="value" value="arg1:=1.2" />
-	</include>
-
 	<include file="$(find kubot_navigation)/launch/include/move_base.launch.xml">
 		<arg name="local_planner" default="$(arg local_planner)"/>
 	</include>
