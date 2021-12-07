@@ -7,11 +7,11 @@ TebLocalPlannerROS:
   # Trajectory
 
   teb_autosize: True
-  dt_ref: 0.2 #0.2
+  dt_ref: 0.3 #0.2
   dt_hysteresis: 0.02
   global_plan_overwrite_orientation: True
   max_global_plan_lookahead_dist: 0.50 #3.0
-  feasibility_check_no_poses: 10
+  feasibility_check_no_poses: 5
 
   # Robot
 
@@ -35,8 +35,8 @@ TebLocalPlannerROS:
 
   # Goal tolerance
 
-  xy_goal_tolerance: 0.30 #0.2
-  yaw_goal_tolerance: 0.785
+  xy_goal_tolerance: 0.2 #0.2
+  yaw_goal_tolerance: 0.2
   free_goal_vel: False
 
   # Obstacles
