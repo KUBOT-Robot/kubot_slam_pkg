@@ -4,6 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
         - /TF1/Frames1
         - /TF1/Tree1
         - /Global Map1/Planner1
@@ -68,21 +69,31 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        front_left_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_right_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         laser_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        logo_frame:
+        lidar1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lidar2_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -92,7 +103,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_caster_link:
+        r2_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r3_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_left_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rear_right_caster_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -142,9 +168,7 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
       Min Color: 0; 0; 0
-      Min Intensity: 0
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -152,7 +176,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.05000000074505806
       Style: Squares
-      Topic: /scan_filtered
+      Topic: /scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -172,9 +196,7 @@ Visualization Manager:
       Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 4096
       Min Color: 0; 0; 0
-      Min Intensity: 0
       Name: Bumper Hit
       Position Transformer: XYZ
       Queue Size: 10
@@ -284,9 +306,7 @@ Visualization Manager:
           Enabled: false
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 218.8000030517578
           Min Color: 0; 0; 0
-          Min Intensity: 0
           Name: Cost Cloud
           Position Transformer: XYZ
           Queue Size: 10
@@ -314,9 +334,7 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 3845.659912109375
           Min Color: 0; 0; 0
-          Min Intensity: 5.659999847412109
           Name: Trajectory Cloud
           Position Transformer: XYZ
           Queue Size: 10
@@ -451,15 +469,15 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 18.078815460205078
+      Distance: 14.796401977539062
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.4729645252227783
-        Y: -2.9239614009857178
+        X: 2.8348915576934814
+        Y: -3.114609718322754
         Z: 3.0994415283203125e-6
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806

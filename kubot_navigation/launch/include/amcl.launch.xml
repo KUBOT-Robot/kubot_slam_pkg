@@ -1,7 +1,7 @@
 <launch>
   <arg name="namespace" default=""/>
   <arg name="use_map_topic" default="false"/>
-  <arg name="scan_topic" default="scan_filtered"/>
+  <arg name="scan_topic" default="scan"/>
 	<arg name="model_type" default="$(env KUBOT_MODEL_TYPE)" doc="model type [diff-corrected omni-corrected]"/>
 
   <node pkg="amcl" type="amcl" name="amcl" output="screen" clear_params="true">

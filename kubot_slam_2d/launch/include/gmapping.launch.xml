@@ -1,5 +1,5 @@
 <launch>
-  <arg name="scan_topic"  default="scan_filtered" />
+  <arg name="scan_topic"  default="scan" />
   <arg name="base_frame"  default="footprint"/>
   <arg name="odom_frame"  default="odom"/>
 

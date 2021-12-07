@@ -3,10 +3,10 @@
 
 	<node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
 		<rosparam command = "load" file = "$(find kubot_lidar)/params/box_filter_$(arg model).yaml"/>
-	   <!--
+	   <!---->
 		   <param name="target_frame" type="string" value="laser_link" />
-			<remap from="scan" to="scan" />
+			<remap from="scan" to="scan_mix" />
 			<remap from="scan_filtered" to="scan" />
-		-->
+		
 	</node>
 </launch>
